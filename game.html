@@ -48,6 +48,7 @@
 	<script>
 	  $(function () {
 	    var socket = io();
+	     $('#submit').prop( "disabled", true);
 
 	    socket.on('game start', function(msg){
 	    	$('#submit').prop( "disabled", false);
@@ -69,6 +70,7 @@
 	    socket.on('end game', function(msg){
 	    	$('#panel').empty();
 	    	$('#leaderboard').empty();
+	    	location.reload();
 	    	 $('#submit').prop( "disabled", true);
 	    });
 	  });
