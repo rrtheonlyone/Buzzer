@@ -69,8 +69,9 @@
 	    socket.on('end game', function(msg){
 	    	$('#panel').empty();
 	    	$('#leaderboard').empty();
-	    	 $('#submit').prop( "disabled", false);
+	    	 $('#submit').prop( "disabled", true);
 	    	socket.disconnect();
+	    	socket.reconnect();
 	    });
 	  });
 	</script>
