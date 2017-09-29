@@ -74,8 +74,6 @@
 	    socket.on('end game', function(msg){
 	    	$('#panel').empty();
 	    	$('#leaderboard').empty();
-	    	socket.disconnect();
-	    	socket.reconnect();
 	    });
 
 	  });
