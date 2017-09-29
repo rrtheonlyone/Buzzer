@@ -67,7 +67,10 @@
 	    });
 
 	    socket.on('end game', function(msg){
-	    	location.reload();
+	    	$('#panel').empty();
+	    	$('#leaderboard').empty();
+	    	 $('#submit').prop( "disabled", false);
+	    	socket.disconnect();
 	    });
 	  });
 	</script>

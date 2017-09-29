@@ -72,7 +72,9 @@
 	    });
 
 	    socket.on('end game', function(msg){
-	    	location.reload();
+	    	$('#panel').empty();
+	    	$('#leaderboard').empty();
+	    	socket.disconnect();
 	    });
 
 	  });
