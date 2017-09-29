@@ -67,9 +67,7 @@
 	    });
 
 	    socket.on('end game', function(msg){
-	    	$('#leaderboard').empty();
-	    	$('#panel').empty();
-	    	$('#submit').prop( "disabled", false);
+	    	location.reload();
 	    });
 	  });
 	</script>
